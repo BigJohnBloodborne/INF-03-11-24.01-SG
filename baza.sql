@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 28 Lis 2018, 10:30
--- Wersja serwera: 10.1.36-MariaDB
--- Wersja PHP: 7.2.11
+-- Czas generowania: 23 Lut 2022, 12:25
+-- Wersja serwera: 10.4.22-MariaDB
+-- Wersja PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,111 +18,133 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `egzamin`
+-- Baza danych: `klienci`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `zadania`
+-- Struktura tabeli dla tabeli `adresy`
 --
 
-CREATE TABLE `zadania` (
+CREATE TABLE `adresy` (
   `id` int(10) UNSIGNED NOT NULL,
-  `dataZadania` date DEFAULT NULL,
-  `wpis` text,
-  `miesiac` text,
-  `rok` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Osoby_id` int(10) UNSIGNED NOT NULL,
+  `ulica` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `numer` int(10) UNSIGNED DEFAULT NULL,
+  `miasto` text COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Zrzut danych tabeli `zadania`
+-- Zrzut danych tabeli `adresy`
 --
 
-INSERT INTO `zadania` (`id`, `dataZadania`, `wpis`, `miesiac`, `rok`) VALUES
-(1, '2020-07-01', 'Projekt z programowania', 'lipiec', 2020),
-(2, '2020-07-02', 'Projekt z programowania', 'lipiec', 2020),
-(3, '2020-07-03', '', 'lipiec', 2020),
-(4, '2020-07-04', '', 'lipiec', 2020),
-(5, '2020-07-05', '', 'lipiec', 2020),
-(6, '2020-07-06', '', 'lipiec', 2020),
-(7, '2020-07-07', 'Weterynarz - Brutus', 'lipiec', 2020),
-(8, '2020-07-08', '', 'lipiec', 2020),
-(9, '2020-07-09', '', 'lipiec', 2020),
-(10, '2020-07-10', 'Szczepienie', 'lipiec', 2020),
-(11, '2020-07-11', '', 'lipiec', 2020),
-(12, '2020-07-12', '', 'lipiec', 2020),
-(13, '2020-07-13', '', 'lipiec', 2020),
-(14, '2020-07-14', '', 'lipiec', 2020),
-(15, '2020-07-15', '', 'lipiec', 2020),
-(16, '2020-07-16', '', 'lipiec', 2020),
-(17, '2020-07-17', '', 'lipiec', 2020),
-(18, '2020-07-18', 'Wyjazd na wakacje!', 'lipiec', 2020),
-(19, '2020-07-19', 'Mielno', 'lipiec', 2020),
-(20, '2020-07-20', 'Mielno', 'lipiec', 2020),
-(21, '2020-07-21', 'Mielno', 'lipiec', 2020),
-(22, '2020-07-22', 'Mielno', 'lipiec', 2020),
-(23, '2020-07-23', 'Mielno', 'lipiec', 2020),
-(24, '2020-07-24', 'Mielno', 'lipiec', 2020),
-(25, '2020-07-25', '', 'lipiec', 2020),
-(26, '2020-07-26', '', 'lipiec', 2020),
-(27, '2020-07-27', '', 'lipiec', 2020),
-(28, '2020-07-28', '', 'lipiec', 2020),
-(29, '2020-07-29', 'Weterynarz - Brutus', 'lipiec', 2020),
-(30, '2020-07-30', 'Warszawa', 'lipiec', 2020),
-(31, '2020-07-31', 'Warszawa', 'lipiec', 2020),
-(32, '2020-08-01', 'Remont', 'sierpien', 2020),
-(33, '2020-08-02', 'Remont', 'sierpien', 2020),
-(34, '2020-08-03', 'Remont', 'sierpien', 2020),
-(35, '2020-08-04', 'Remont', 'sierpien', 2020),
-(36, '2020-08-05', '', 'sierpien', 2020),
-(37, '2020-08-06', '', 'sierpien', 2020),
-(38, '2020-08-07', 'Rower', 'sierpien', 2020),
-(39, '2020-08-08', 'Rower', 'sierpien', 2020),
-(40, '2020-08-09', '', 'sierpien', 2020),
-(41, '2020-08-10', '', 'sierpien', 2020),
-(42, '2020-08-11', 'Weterynarz - Dika', 'sierpien', 2020),
-(43, '2020-08-12', '', 'sierpien', 2020),
-(44, '2020-08-13', 'Sopot', 'sierpien', 2020),
-(45, '2020-08-14', 'Sopot', 'sierpien', 2020),
-(46, '2020-08-15', '', 'sierpien', 2020),
-(47, '2020-08-16', '', 'sierpien', 2020),
-(48, '2020-08-17', 'Wyjazd na wakacje!', 'sierpien', 2020),
-(49, '2020-08-18', 'Tatry', 'sierpien', 2020),
-(50, '2020-08-19', 'Tatry', 'sierpien', 2020),
-(51, '2020-08-20', 'Tatry', 'sierpien', 2020),
-(52, '2020-08-21', 'Tatry', 'sierpien', 2020),
-(53, '2020-08-22', 'Tatry', 'sierpien', 2020),
-(54, '2020-08-23', 'Tatry', 'sierpien', 2020),
-(55, '2020-08-24', 'Tatry', 'sierpien', 2020),
-(56, '2020-08-25', '', 'sierpien', 2020),
-(57, '2020-08-26', '', 'sierpien', 2020),
-(58, '2020-08-27', '', 'sierpien', 2020),
-(59, '2020-08-28', '', 'sierpien', 2020),
-(60, '2020-08-29', 'Weterynarz - Dika', 'sierpien', 2020),
-(61, '2020-08-30', '', 'sierpien', 2020),
-(62, '2020-08-31', '', 'sierpien', 2020),
-(63, '2020-11-01', NULL, 'listopad', 2020);
+INSERT INTO `adresy` (`id`, `Osoby_id`, `ulica`, `numer`, `miasto`) VALUES
+(1, 1, 'Mickiewicza', 54, 'Poznań'),
+(2, 1, 'Sienkiewicza', 124, 'Poznań'),
+(3, 2, 'Zielona', 14, 'Kraków'),
+(4, 3, 'Swobodna', 134, 'Wrocław'),
+(5, 4, 'Traugutta', 14, 'Warszawa'),
+(6, 4, 'Olimpijska', 124, 'Warszawa');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `osoby`
+--
+
+CREATE TABLE `osoby` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `imie` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `nazwisko` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `dataUr` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Zrzut danych tabeli `osoby`
+--
+
+INSERT INTO `osoby` (`id`, `imie`, `nazwisko`, `dataUr`) VALUES
+(1, 'Anna', 'Kowalewska', '2002-11-02'),
+(2, 'Ewa', 'Kowalska', '2002-06-02'),
+(3, 'Andrzej', 'Nowak', '2001-03-02'),
+(4, 'Grzegorz', 'Wojciechowski', '1975-11-02'),
+(5, 'Joanna', 'Nowakowska', '1986-02-02'),
+(6, 'Anna', 'Nowak', '1974-11-02'),
+(7, 'Piotr', 'Wiśniewski', '1975-01-02');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `telefony`
+--
+
+CREATE TABLE `telefony` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `Osoby_id` int(10) UNSIGNED NOT NULL,
+  `numer` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Zrzut danych tabeli `telefony`
+--
+
+INSERT INTO `telefony` (`id`, `Osoby_id`, `numer`) VALUES
+(1, 1, '111222333'),
+(2, 1, '223344556'),
+(3, 3, '222333444'),
+(4, 2, '333444555'),
+(5, 4, '444555666'),
+(6, 5, '666665555'),
+(7, 6, '223344555'),
+(8, 6, '123456789'),
+(9, 7, '987654321');
 
 --
 -- Indeksy dla zrzutów tabel
 --
 
 --
--- Indeksy dla tabeli `zadania`
+-- Indeksy dla tabeli `adresy`
 --
-ALTER TABLE `zadania`
+ALTER TABLE `adresy`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Adresy_FKIndex1` (`Osoby_id`);
+
+--
+-- Indeksy dla tabeli `osoby`
+--
+ALTER TABLE `osoby`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indeksy dla tabeli `telefony`
+--
+ALTER TABLE `telefony`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Telefony_FKIndex1` (`Osoby_id`);
+
+--
+-- AUTO_INCREMENT dla zrzuconych tabel
 --
 
 --
--- AUTO_INCREMENT dla tabeli `zadania`
+-- AUTO_INCREMENT dla tabeli `adresy`
 --
-ALTER TABLE `zadania`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+ALTER TABLE `adresy`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT dla tabeli `osoby`
+--
+ALTER TABLE `osoby`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT dla tabeli `telefony`
+--
+ALTER TABLE `telefony`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
