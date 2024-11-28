@@ -1,0 +1,58 @@
+body{
+    background-color: #CCC;
+}
+
+header{
+    width: 90%;
+    height: 100px;
+}
+#logo, #baner{
+    float: left;
+    
+}
+
+#baner{
+    text-align: center;
+    
+}
+
+#pfp{
+    float: right;
+}
+
+#pfpimg{
+    border: none;
+    padding: 0px 0px 0px 0px;
+    width: 10%
+
+}
+
+#pfpbutton{
+    width: 174.5px;
+}
+
+#eltitel{
+    border: solid black 1px;
+    width: 100%;
+    height: 700px;
+}
+
+#bloodborneLogo{
+    padding-bottom: 5px;
+}
+
+aside{
+    width: 9%;
+    background-color: #CCB;
+    float: right;
+    position: FLEX;
+    height: 83.5vh;
+
+}
+
+main{
+    width: 90%;
+    float: left;
+    position: absolute;
+}
+
