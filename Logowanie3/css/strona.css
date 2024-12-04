@@ -1,0 +1,123 @@
+header{
+    background-color: darkslategray;
+    width: 100%;
+    height: 100px;
+}
+
+body {
+    background-color: rgb(97, 0, 45);
+    margin: 0%;
+}
+
+#Onas{
+    float: left;
+    width: 20%;
+    height: 100px;
+    text-align: center;
+}
+
+#logo{
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+#Koszyk{
+    float: left;
+    width: 20%;
+    height: 100px;
+    text-align: center; 
+}
+
+#Aktualności{
+    float: left;
+    width: 20%;
+    height: 100px;
+    text-align: center;
+}
+
+#pfp{
+    float: right;
+}
+
+.user{
+    height: 100px;
+    width: 15%;
+    float: left;
+}
+
+#bloodborneLogo{
+    height: 100px;
+    border-radius: 100%;
+}
+
+#defaultProf{
+    height: 97px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+main{
+    border: solid 1px black;
+    min-height: 1000px;
+    width: 90%;
+    background-color: blanchedalmond;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 120px;
+    padding: 10px;
+}
+
+#Koszyk:hover, #Aktualności:hover, #Onas:hover, #pfp:hover{
+    background-color: gray;
+}
+
+.dropdown-nav{
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    background-color: darkslategray;
+    width: 150px;
+}
+
+.dropdown-nav a{
+    padding: 20px;
+    text-align: center;
+}
+
+.dropdown-nav a:hover{
+    background-color: darkorchid;
+}
+
+#pfp:hover .dropdown-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-nav a, .dropdown-nav button{
+    padding: 20px;
+    text-align: center;
+    margin: 0px;
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    border: none;
+}   
+
+.dropdown-nav button{
+    width: 100%;
+}
+
+.dropdown-nav a:hover{
+    background-color: darkorchid;
+    color: white;
+}
+
